@@ -15,7 +15,7 @@ class Queue {
     Queue(const Queue &q) {
         __front = 0;
         __capacity = __back = q.__back - q.__front;
-        if (__capacity > 0) {
+        if (__capacity != 0) {
             __data = new T[__capacity];
             for (size_t i = 0; i < __back; ++i) {
                 __data[i] = q.__data[i + q.__front];
@@ -30,7 +30,7 @@ class Queue {
 
             __front = 0;
             __capacity = __back = q.__back - q.__front;
-            if (__capacity > 0) {
+            if (__capacity != 0) {
                 __data = new T[__capacity];
                 for (size_t i = 0; i < __back; ++i) {
                     __data[i] = q.__data[i + q.__front];
