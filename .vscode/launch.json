@@ -2,13 +2,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
+            "name": "(lldb) Launch",
+            "type": "lldb",
             "request": "launch",
             // Resolved by CMake Tools:
             "program": "${command:cmake.launchTargetPath}",
-            // Place your args here
-            "args": ["-l", "1234"],
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [
@@ -23,8 +22,8 @@
                     "value": "Something something"
                 }
             ],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "console": "externalTerminal",
+            "MIMode": "lldb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
